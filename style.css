@@ -1,0 +1,33 @@
+header {
+  background: gray;
+  height: 200px;
+}
+
+nav {
+  background: red;
+}
+
+.main-flex-container {
+  display: block;
+}
+
+main {
+  height: 400px;
+  background: orange;
+}
+
+aside {
+  height: 200px;
+  background: green;
+}
+
+footer {
+  height: 200px;
+  background: pink;
+}
+
+@media screen and (min-width: 500px) {
+  .main-flex-container {
+    display: flex;
+  }
+}
