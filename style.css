@@ -1,33 +1,94 @@
-header {
-  background: gray;
-  height: 200px;
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: powderblue;
+  transition: background ease 1s;
+  height: 100vh;
 }
 
-nav {
-  background: red;
+.flex-item {
+  position: relative;
+  flex: 0 0 auto;
+  height: 100px;
+  width: 300px;
 }
 
-.main-flex-container {
-  display: block;
-}
+.flex-item::before {
+  content: 'powderblue';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 
-main {
-  height: 400px;
-  background: orange;
-}
-
-aside {
-  height: 200px;
-  background: green;
-}
-
-footer {
-  height: 200px;
-  background: pink;
+  height: 100%;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  text-transform: uppercase;
 }
 
 @media screen and (min-width: 500px) {
-  .main-flex-container {
-    display: flex;
+  .flex-container {
+    background: yellow;
+  }
+  .flex-item::before {
+    content: 'yellow';
+  }
+}
+@media screen and (min-width: 600px) {
+  .flex-container {
+    background: red;
+  }
+  .flex-item::before {
+    content: 'red';
+  }
+}
+@media screen and (min-width: 700px) {
+  .flex-container {
+    background: turquoise;
+  }
+  .flex-item::before {
+    content: 'turquoise';
+  }
+}
+@media screen and (min-width: 800px) {
+  .flex-container {
+    background: green;
+  }
+  .flex-item::before {
+    content: 'green';
+  }
+}
+@media screen and (min-width: 900px) {
+  .flex-container {
+    background: orange;
+  }
+  .flex-item::before {
+    content: 'orange';
+  }
+}
+@media screen and (min-width: 1000px) {
+  .flex-container {
+    background: blueviolet;
+  }
+  .flex-item::before {
+    content: 'blueviolet';
+  }
+}
+@media screen and (min-width: 1100px) {
+  .flex-container {
+    background: mediumvioletred;
+  }
+  .flex-item::before {
+    content: 'mediumvioletred';
+  }
+}
+@media screen and (min-width: 1200px) {
+  .flex-container {
+    background: tomato;
+  }
+  .flex-item::before {
+    content: 'tomato';
   }
 }
